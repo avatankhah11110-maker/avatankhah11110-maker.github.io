@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="googlebot" content="noindex, nofollow, noarchive">
+
+    <title>V A T A N K H A H | Profile</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background:
+                radial-gradient(circle at 50% 0%, #5d1016 0%, #210609 25%, #090909 60%, #000 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 50% 15%, rgba(255, 0, 30, 0.18), transparent 35%),
+                linear-gradient(120deg, transparent 40%, rgba(255, 0, 0, 0.03), transparent 60%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 850px;
+            margin: auto;
+            padding: 30px 0 50px;
+        }
+
+        /* کارت اصلی */
+
+        .profile-card {
+            background: rgba(15, 15, 17, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 32px;
+            padding: 35px 22px;
+            text-align: center;
+            box-shadow:
+                0 25px 80px rgba(0, 0, 0, 0.75),
+                0 0 45px rgba(180, 0, 20, 0.13);
+            backdrop-filter: blur(18px);
+        }
+
+        /* عکس */
+
+        .avatar {
+            width: 155px;
+            height: 155px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #b90018;
+            box-shadow:
+                0 0 0 8px rgba(185, 0, 24, 0.10),
+                0 0 40px rgba(255, 0, 30, 0.35);
+            margin-bottom: 22px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 7vw, 52px);
+            letter-spacing: 9px;
+            margin-bottom: 12px;
+            color: #fff;
+            text-shadow: 0 0 25px rgba(255, 0, 30, 0.18);
+        }
+
+        .username {
+            direction: ltr;
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .intro {
+            line-height: 2.2;
+            color: #ddd;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        /* دکمه ها */
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-btn {
+            width: 100%;
+            min-height: 72px;
+            padding: 16px 20px;
+            border-radius: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.11);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .main-btn {
+            background: linear-gradient(135deg, #ff001e, #8f0013);
+            border-color: rgba(255, 50, 70, 0.5);
+            box-shadow: 0 10px 35px rgba(180, 0, 20, 0.25);
+        }
+
+        .main-btn:hover {
+            background: linear-gradient(135deg, #ff1732, #a50017);
+        }
+
+        .company-btn {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(120, 0, 15, 0.45),
+                    rgba(255, 255, 255, 0.06)
+                );
+            border-color: rgba(180, 0, 25, 0.35);
+        }
+
+        .link-btn span {
+            direction: ltr;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* اطلاعات کوچک */
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .info-box {
+            min-height: 130px;
+            padding: 20px 12px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .info-icon {
+            font-size: 28px;
+        }
+
+        .info-title {
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        /* بخش ها */
+
+        .section {
+            margin-top: 25px;
+            padding: 28px 22px;
+            border-radius: 30px;
+            background: rgba(12, 12, 14, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .section-title {
+            font-size: 21px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .section-title::first-letter {
+            color: #e60020;
+        }
+
+        .about-text {
+            color: #bbb;
+            line-height: 2.2;
+            font-size: 15px;
+        }
+
+        /* سوابق */
+
+        .timeline {
+            position: relative;
+            padding-right: 22px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: linear-gradient(#c9001b, rgba(201, 0, 27, 0.05));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 22px;
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            right: -23px;
+            top: 24px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d6001e;
+            box-shadow: 0 0 15px rgba(255, 0, 30, 0.7);
+        }
+
+        .timeline-name {
+            font-size: 17px;
+            color: #fff;
+            margin-bottom: 7px;
+        }
+
+        .timeline-status {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .current {
+            border-color: rgba(220, 0, 30, 0.28);
+            background: linear-gradient(
+                135deg,
+                rgba(130, 0, 15, 0.15),
+                rgba(255, 255, 255, 0.03)
+            );
+        }
+
+        /* تگ ها */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 9px;
+        }
+
+        .tag {
+            padding: 8px 13px;
+            border-radius: 30px;
+            font-size: 11px;
+            color: #aaa;
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            direction: ltr;
+        }
+
+        /* فوتر */
+
+        footer {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 30px;
+            line-height: 2;
+        }
+
+        .footer-name {
+            color: #aaa;
+        }
+
+        /* موبایل */
+
+        @media (max-width: 500px) {
+            .container {
+                width: 94%;
+                padding-top: 20px;
+            }
+
+            .profile-card {
+                padding: 28px 16px;
+                border-radius: 28px;
+            }
+
+            .avatar {
+                width: 135px;
+                height: 135px;
+            }
+
+            h1 {
+                letter-spacing: 6px;
+                font-size: 30px;
+            }
+
+            .intro {
+                font-size: 14px;
+            }
+
+            .quick-info {
+                gap: 10px;
+            }
+
+            .info-box {
+                min-height: 115px;
+            }
+
+            .section {
+                padding: 24px 17px;
+                border-radius: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- پروفایل اصلی -->
+
+    <div class="profile-card">
+
+        <img
+            src="profile.png"
+            alt="V A T A N K H A H"
+            class="avatar"
+        >
+
+        <div class="badge">
+            PROFILE ✦
+        </div>
+
+        <h1>V A T A N K H A H</h1>
+
+        <div class="username">
+            @Me_VaTaNKHaH
+        </div>
+
+        <div class="intro">
+            خوش آمدید به صفحه شخصی من.<br>
+            اینجا بخشی از هویت، مسیر و اطلاعات من را خواهید دید.
+        </div>
+
+        <!-- لینک ها -->
+
+        <div class="links">
+
+            <a
+                href="#history"
+                class="link-btn main-btn"
+            >
+                👑 مشاهده سوابق
+            </a>
+
+            <a
+                href="https://rubika.ir/Me_VaTaNKHaH"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn"
+            >
+                🟣 آیدی اصلی روبیکا
+                <span>@Me_VaTaNKHaH</span>
+            </a>
+
+            <a
+                href="https://rubika.ir/iNFo_VaTaNKHaH"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn"
+            >
+                📚 مرکز اطلاعات روبیکا
+                <span>@iNFo_VaTaNKHaH</span>
+            </a>
+
+            <!-- شرکت ما -->
+
+            <a
+                href="https://rubika.ir/company_vatankhah"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-btn company-btn"
+            >
+                🏢 شرکت ما در روبیکا
+                <span>@company_vatankhah</span>
+            </a>
+
+        </div>
+
+        <!-- اطلاعات سریع -->
+
+        <div class="quick-info">
+
+            <div class="info-box">
+                <div class="info-icon">👤</div>
+                <div class="info-title">
+                    پروفایل شخصی
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">✦</div>
+                <div class="info-title">
+                    اطلاعات و سوابق
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- درباره من -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            🔷 درباره من
+        </h2>
+
+        <p class="about-text">
+            این صفحه نمایانگر بخشی از هویت و مسیر شخصی
+            <b>V A T A N K H A H</b>
+            است.
+            در این صفحه می‌توانید اطلاعات، سوابق و راه‌های ارتباطی
+            مرتبط با من را مشاهده کنید.
+        </p>
+
+    </section>
+
+
+    <!-- سوابق -->
+
+    <section class="section" id="history">
+
+        <h2 class="section-title">
+            👑 سوابق و هویت‌ها
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-name">
+                    مسترعلیرضا
+                </div>
+                <div class="timeline-status">
+                    سابق
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-name">
+                    آف.پوداکس
+                </div>
+                <div class="timeline-status">
+                    سابق
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-name">
+                    کِنو
+                </div>
+                <div class="timeline-status">
+                    سابق
+                </div>
+            </div>
+
+            <div class="timeline-item current">
+                <div class="timeline-name">
+                    وطنخواه
+                </div>
+                <div class="timeline-status">
+                    هویت فعلی
+                </div>
+            </div>
+
+            <div class="timeline-item current">
+                <div class="timeline-name">
+                    مدیریت شکوفه
+                </div>
+                <div class="timeline-status">
+                    فعلی
+                </div>
+            </div>
+
+            <div class="timeline-item current">
+                <div class="timeline-name">
+                    مدیریت کل عدالت
+                </div>
+                <div class="timeline-status">
+                    فعلی
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- برچسب ها -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            ✦ اطلاعات صفحه
+        </h2>
+
+        <div class="tags">
+
+            <div class="tag">
+                PERSONAL
+            </div>
+
+            <div class="tag">
+                V A T A N K H A H
+            </div>
+
+            <div class="tag">
+                PROFILE
+            </div>
+
+            <div class="tag">
+                IDENTITY
+            </div>
+
+            <div class="tag">
+                HISTORY
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- فوتر -->
+
+    <footer>
+
+        <div class="footer-name">
+            V A T A N K H A H
+        </div>
+
+        © 2026 — Personal Profile
+
+    </footer>
+
+</div>
+
+</body>
+</html>
